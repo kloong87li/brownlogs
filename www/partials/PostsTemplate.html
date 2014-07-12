@@ -1,8 +1,21 @@
 <div class="postsContainer">
 	<h2>Posts</h2>
 	<div class="post" ng-repeat="post in posts" ng-class-even="'evenPost'">
-		<p class="postContent">{{post.content}}</p>
-		<p class="author">{{post.author}}</p>
-		<p class="date">{{post.date}}</p>
+		<div class="post-content">
+      <p class="postText">{{post.text}}</p>
+  		<p class="author">{{post.author}}</p>
+  		<p class="date">{{post.date}}</p>
+    </div>
+    <div class="post-button-bar clearfix" 
+         ng-class="post.voteStatus"
+         ng-swipe-left="votePost(post, 'downvote')"
+         ng-swipe-right="votePost(post, 'upvote')">
+      <div class="upvote-btn" ng-click="votePost(post, 'upvote')">
+        [Y]
+      </div>
+      <div class="downvote-btn" ng-click="votePost(post, 'downvote')">
+        [N]
+      </div>
+    </div>
 	</div>
 </div>

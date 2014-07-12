@@ -24,8 +24,11 @@
 #stallProfileContainer .post h2{
 	border-bottom: 1px solid #000;
 }
-#stallProfileContainer .postContent{
-	padding: 1rem 1rem 0 1rem;
+#stallProfileContainer .post-content{
+  padding: 1rem;
+  position: relative;
+}
+#stallProfileContainer .postText{
 	margin: 0;
 }
 #stallProfileContainer .author, #stallProfileContainer .date{
@@ -80,4 +83,34 @@
 #stallProfileContainer #postBar .writePostInput{
 	width: 60%;
 	display: inline-block;
+}
+
+#stallProfileContainer .post-button-bar {
+  height: 2rem;
+}
+
+#stallProfileContainer .post-button-bar .upvote-btn {
+  display: inline-block;
+  float: right;
+  width: 50%;
+  height: 100%;
+  background-color: #A5FF99;
+  text-align: center;
+}
+
+#stallProfileContainer .post-button-bar .downvote-btn {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #FFB0B0;
+  text-align: center;
+}
+
+#stallProfileContainer .post-button-bar.upvote .upvote-btn {
+  background-color: #3DD900;
+}
+
+#stallProfileContainer .post-button-bar.downvote .downvote-btn {
+  background-color: #F70000;
 }
