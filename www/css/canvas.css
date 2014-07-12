@@ -57,9 +57,10 @@ canvas {
 #canvas-container {
 	background-color: #fcfbe3;
 	position: absolute;
-	top: 3rem;
 	margin-bottom: 0rem;
 	padding: 0rem;
+	padding-top: 25%;
+	min-height: 100%;
 }
 
 .button {

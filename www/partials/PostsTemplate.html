@@ -9,6 +9,8 @@
          ng-swipe-right="votePost(post, 'upvote')">
   		<div class="post-content" >
             <p class="author">{{post.author}} - {{post.date}}<p class="postText">{{post.text}}</p></p>
+            <p class="postText">{{post.text}}</p>
+            <img class="postImage" data-ng-show="post.image" src="{{post.image}}" />
         </div>
         <div class="row">
           <div class="post-button-bar clearfix" 

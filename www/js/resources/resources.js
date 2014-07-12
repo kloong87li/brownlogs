@@ -23,6 +23,7 @@ app.factory('StallsResource', ['$resource', function($resource){
   return $resource('http://www.brownlog.com/api/venues/:vId/stalls/:stallId',
     {vId: 0, stallId: '@stallId'},
     {
-      fetchSingleStall: {method: 'GET'}
+      fetchSingleStall: {method: 'GET'},
+      fetchStalls: {method: 'GET'}
     });
 }]);

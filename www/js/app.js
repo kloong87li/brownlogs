@@ -9,7 +9,7 @@ app.config(['$routeProvider',
       })
       .when('/browseStalls', {
         templateUrl: 'partials/browseStalls.html',
-        controller: 'MainController'
+        controller: 'StallsController'
       })
       .when('/stall/:stallID', {
         templateUrl: 'partials/StallProfile.html',
