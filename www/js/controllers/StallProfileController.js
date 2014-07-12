@@ -18,6 +18,7 @@ function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
     $scope.ratingNum = response.rating;
     $scope.stallImage = response.pictureUrl;
     $scope.stallGender = response.gender;
+    $scope.msgCount = response.msgCount;
     $scope.ratingDesc = ratingMap[Math.round(response.rating)];
   });
 
