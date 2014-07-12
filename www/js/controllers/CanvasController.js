@@ -1,5 +1,3 @@
-//var canvas = angular.module("canvas", []);
-
 app.controller('CanvasController', function($scope, canvasRenderer) {
 	'use strict';
 	var colors, 
@@ -23,13 +21,13 @@ app.controller('CanvasController', function($scope, canvasRenderer) {
 	    	return data;
 	    };
 
-		$scope.colorCss = "brown";
+		$scope.colorCss = 'brown';
 
 		$scope.init = function() {
 			var offset;
 
 			colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown'];
-			colorValue = ['#000000', '#ff0000', '#ff6600', '#ffff00', '#009900', '#0033ee', '#5500ff', '#5e2e0d'];
+			colorValue = ['#000000', '#ff0000', '#ff6600', '#fff44f', '#009900', '#0033ee', '#5500ff', '#5e2e0d'];
 		    drawArea = document.getElementById("canvas");
 		    context = drawArea.getContext("2d");
 		    canvasRenderer.setContext(context);
@@ -40,12 +38,17 @@ app.controller('CanvasController', function($scope, canvasRenderer) {
 		    startPos = { x: 0, y: 0 };
 			endPos = { x: 0, y: 0 };
 
-			drawArea.onmousedown = function(e) {
+			drawArea.addEventListener('touchstart', doTouchStart, false);
+			drawArea.addEventListener('touchmove', doTouchMove, false);
+			drawArea.addEventListener('touchend', doTouchEnd, false);
+
+			function doTouchStart(e) {
+				e.preventDefault();
 				var data;
 
 				points.push({
-					x: (e.pageX - drawArea.offsetLeft) - offset,
-					y: (e.pageY - drawArea.offsetTop) - offset,
+					x: (e.targetTouches[0].pageX - drawArea.offsetLeft) - offset,
+					y: (e.targetTouches[0].pageY - drawArea.offsetTop) - offset,
 					color: colorValue[colorNumber]
 				});
 
@@ -60,12 +63,13 @@ app.controller('CanvasController', function($scope, canvasRenderer) {
 				canvasRenderer.render(data);
 			};
 
-			drawArea.onmousemove = function(e) {
+			function doTouchMove(e) {
+				e.preventDefault();
 				var x, y, lastPoint, data;
 
 				if (mouseDown) {
-					x = (e.pageX - drawArea.offsetLeft) - offset;
-					y = (e.pageY - drawArea.offsetTop) - offset;
+					x = (e.targetTouches[0].pageX - drawArea.offsetLeft) - offset;
+					y = (e.targetTouches[0].pageY - drawArea.offsetTop) - offset;
 
 					points.push({
 						x: x,
@@ -82,7 +86,9 @@ app.controller('CanvasController', function($scope, canvasRenderer) {
 				}			
 			};
 
-			drawArea.onmouseup = function(e) {
+			function doTouchEnd(e) {
+				e.preventDefault();
+
 				var data;
 
 				mouseDown = false;

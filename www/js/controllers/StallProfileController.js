@@ -1,5 +1,7 @@
-app.controller('StallProfileController', ['$scope', '$routeParams', '$window', 
-function($scope, $routeParams, $window) {
+app.controller('StallProfileController', ['$scope', '$routeParams', '$window', 'PostResource', 
+function($scope, $routeParams, $window, PostResource) {
+	$scope.stallID = $routeParams.stallID;
+
 	$scope.stallName = 'Royal Toilet of Sir Jonathan Poon';
 	$scope.stallDesc = 'This is the toilet of Sir Jonathan Poon. In the 20 year history of this toilet, it has been used thousands of times. Attempts to renovate this toilet has been denied by Sir Jonathan Poon. It may not function as well as modern toilets, but it has the blessings of Sir Johnathan Poon. Use with caution.';
 	$scope.ratingNum = 3;
@@ -50,8 +52,12 @@ function($scope, $routeParams, $window) {
 		}
 		console.log($scope.scrollingUp);
 		$scope.prevYPos = $scope.scrollYPos;
-
 	};
+
+  PostResource.fetchPosts({stallId: $scope.stallID}, function(posts){
+    $scope.posts = posts;
+    console.log(posts);
+  });
 
   $scope.votePost = function(post, status) {
     if (post.voteStatus === status)
@@ -67,7 +73,6 @@ function($scope, $routeParams, $window) {
     else
       post.downvotes++;
   }
-
 
 	angular.element($window).bind('scroll', $scope.detectScrollDir);
 	//console.log($routeParams);
