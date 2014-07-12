@@ -39,7 +39,7 @@
 }
 #stallsBar.male .men-item label{
   border-bottom: 2px solid #AAA;
-}n
+}
 #stallsBar.male .men-item img{
   opacity: 1;
 }
@@ -49,8 +49,11 @@
 }
 #stallsBar.female .women-item label{
   border-bottom: 2px solid #AAA;
-}n
+}
 #stallsBar.female .women-item img{
   opacity: 1;
 }
 
+#stallsBar .item {
+  padding: 1.25rem 1rem;
+}
