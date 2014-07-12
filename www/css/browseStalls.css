@@ -15,4 +15,42 @@
 
 }
 
+#stallsBar .item * {
+  color: #AAA;
+
+}
+
+#stallsBar .item img{
+  opacity: .6;
+}
+
+#stallsBar.all .all-item *{
+  color: #FFF;
+}
+#stallsBar.all .all-item label{
+  border-bottom: 2px solid #AAA;
+}
+#stallsBar.all .all-item img{
+  opacity: 1;
+}
+
+#stallsBar.male .men-item *{
+  color: #FFF;
+}
+#stallsBar.male .men-item label{
+  border-bottom: 2px solid #AAA;
+}n
+#stallsBar.male .men-item img{
+  opacity: 1;
+}
+
+#stallsBar.female .women-item *{
+  color: #FFF;
+}
+#stallsBar.female .women-item label{
+  border-bottom: 2px solid #AAA;
+}n
+#stallsBar.female .women-item img{
+  opacity: 1;
+}
 
