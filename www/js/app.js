@@ -2,10 +2,14 @@ var app = angular.module('brownLogApp', ['ngRoute']);
 
 app.config(['$routeProvider',
   function($routeProvider) {
-    $routeProvider.
-      when('/', {
+    $routeProvider
+    .when('/', {
         templateUrl: 'partials/main.html',
         controller: 'MainController'
+      })
+      .when('/stall/:stallID', {
+        templateUrl: 'partials/StallProfile.html',
+        controller: 'StallProfileController'
       });
   }]);
 
