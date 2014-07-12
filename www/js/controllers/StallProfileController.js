@@ -71,7 +71,7 @@ function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
 	};
 
   $scope.votePost = function(post, status) {
-    if (post.voteStatus !== status) {
+    if (!post.voteStatus) {
       post.voteStatus = status;
       updatePostVotes(post, status);
     }
