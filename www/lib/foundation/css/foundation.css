@@ -2271,8 +2271,6 @@ label.error {
     .icon-bar > * img {
       width: 1.875rem;
       height: 1.875rem; }
-  .icon-bar > *:hover {
-    background: #AB5262; }
   .icon-bar > * label {
     color: #fff; }
   .icon-bar > * i {
