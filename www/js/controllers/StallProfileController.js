@@ -40,7 +40,6 @@ app.controller('StallProfileController', ['$scope', '$routeParams', '$window', '
   		if (prevScrollingUp != $scope.scrollingUp){
   			$scope.$apply();
   		}
-  		console.log($scope.scrollingUp);
   		$scope.prevYPos = $scope.scrollYPos;
 
   	};
