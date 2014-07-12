@@ -27,8 +27,8 @@ function($scope, PostResource, $routeParams, canvasRenderer) {
 		$scope.init = function() {
 			var offset;
 
-			colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown'];
-			colorValue = ['#000000', '#ff0000', '#ff6600', '#fff44f', '#009900', '#094ecd', '#5731cc', '#5e2e0d'];
+			colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown', 'eraser'];
+			colorValue = ['#000000', '#ff0000', '#ff6600', '#fff44f', '#009900', '#094ecd', '#5731cc', '#5e2e0d', '#ffffff'];
 		    drawArea = document.getElementById("canvas");
 		    context = drawArea.getContext("2d");
 		    canvasRenderer.setContext(context);
