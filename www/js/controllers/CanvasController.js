@@ -27,7 +27,7 @@ app.controller('CanvasController', function($scope, canvasRenderer) {
 			var offset;
 
 			colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown'];
-			colorValue = ['#000000', '#ff0000', '#ff6600', '#fff44f', '#009900', '#0033ee', '#5500ff', '#5e2e0d'];
+			colorValue = ['#000000', '#ff0000', '#ff6600', '#fff44f', '#009900', '#094ecd', '#5731cc', '#5e2e0d'];
 		    drawArea = document.getElementById("canvas");
 		    context = drawArea.getContext("2d");
 		    canvasRenderer.setContext(context);
@@ -106,16 +106,6 @@ app.controller('CanvasController', function($scope, canvasRenderer) {
 		$scope.selectColor = function(color) {
 			colorNumber = color;
 			$scope.colorCss = colors[colorNumber];
-		}
-
-		$scope.undo = function () {
-			canvasRenderer.undo();
-
-			points = [];
-			startPos.x = 0;
-			startPos.y = 0;
-			endPos.x = 0;
-			endPos.y = 0;
 		};
 });
 
@@ -135,6 +125,7 @@ app.factory('canvasRenderer', function () {
 
 			context.beginPath();					
 			context.lineCap = 'round';
+			context.lineWidth = '5';
 			context.strokeStyle = data.Color;
 			context.moveTo(data.Points[0].x, data.Points[0].y);
 			for (i = 0; i < data.Points.length; i++) {
@@ -147,8 +138,5 @@ app.factory('canvasRenderer', function () {
 			context = ctx;
 		},
 
-		undo: function () {
-			buffer.pop();			
-		}
 	};
 });
