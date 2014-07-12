@@ -6,15 +6,19 @@ app.config(['$routeProvider',
     .when('/', {
         templateUrl: 'partials/main.html',
         controller: 'MainController'
-      }).
-      when('/browseStalls', {
+      })
+      .when('/browseStalls', {
         templateUrl: 'partials/browseStalls.html',
         controller: 'MainController'
       })
       .when('/stall/:stallID', {
         templateUrl: 'partials/StallProfile.html',
         controller: 'StallProfileController'
-      });
+      })
+      .when('/draw', {
+        templateUrl: 'partials/canvas.html',
+        controller: 'CanvasController'
+      })
   }]);
 
 app.config(['$httpProvider', function($httpProvider) {

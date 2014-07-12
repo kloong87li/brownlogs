@@ -7,3 +7,27 @@ body {
     height: 100%;
     padding-top: 50%;
 }
+
+#menuBar {
+    height: 40px;
+}
+
+.magGlass {
+    position: absolute;
+    top: 4px;
+    right: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.pencil {
+    position: absolute;
+    top: 4px;
+    right: 0px;
+}
+
+.hrMenu {
+    position: relative;
+    bottom: 20px;
+    font-weight: bold;
+}
