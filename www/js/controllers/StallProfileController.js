@@ -56,7 +56,7 @@ function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
 
 	$scope.scrollYPos = 0;
 	$scope.prevYPos = 0;
-	$scope.scrollingUp = false;
+	$scope.scrollingUp = true;
 
 	$scope.detectScrollDir = function (){
 		var prevScrollingUp = $scope.scrollingUp;
