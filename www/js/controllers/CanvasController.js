@@ -23,7 +23,7 @@ function($scope, PostResource, $routeParams, canvasRenderer, $window) {
 	    };
 
 		$scope.colorCss = 'brown';
-
+		$scope.drewOnCanvas = false;
 		$scope.init = function() {
 			var offset;
 
@@ -90,6 +90,8 @@ function($scope, PostResource, $routeParams, canvasRenderer, $window) {
 			function doTouchEnd(e) {
 				e.preventDefault();
 
+				$scope.drewOnCanvas = true;
+
 				var data;
 
 				mouseDown = false;
@@ -122,16 +124,20 @@ function($scope, PostResource, $routeParams, canvasRenderer, $window) {
 
 		$scope.submitMessage = function() {
 			var stallId = $routeParams.stallID;
+			var requestParams = {
+				stallId: stallId, 
+				author: $scope.author,
+				text: $scope.text,	
+			};
+			if ($scope.drewOnCanvas){
+				requestParams['image'] = $scope.canvas.toDataURL();
+			}
 			PostResource.createPost(
-				{stallId: stallId, 
-				 author: $scope.author,
-				 text: $scope.text,	
-				 image: $scope.canvas.toDataURL()
-				},
-	    function(response){
-	      console.log(response, 'post submitted');
-	      $window.location.href = "#/stall/" + $routeParams	.stallID;
-	    });
+				requestParams,
+	    		function(response){
+	      			console.log(response, 'post submitted');
+	      			$window.location.href = "#/stall/" + $routeParams	.stallID;
+	    		});
 		}
 }]);
 

@@ -21,6 +21,7 @@
 #stallProfileContainer .evenPost{
 }
 #stallProfileContainer .post h2{
+	text-align: center;
 }
 #stallProfileContainer .post-content{
   padding: 1rem;
@@ -48,6 +49,8 @@
 	position: absolute;
 	bottom: 0rem;
 	right: 0.8rem;
+	text-align: right;
+	width: 6rem;
 }
 #stallProfileContainer .date{
 	position: absolute;

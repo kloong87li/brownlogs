@@ -13,9 +13,11 @@ function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
 
   StallsResource.fetchSingleStall({stallId: $scope.stallID}, function(response){
     $scope.stallName = response.name;
+    $scope.stallBuilding = response.building;
     $scope.stallFloor = response.floor;
     $scope.ratingNum = response.rating;
     $scope.stallImage = response.pictureUrl;
+    $scope.stallGender = response.gender;
     $scope.ratingDesc = ratingMap[Math.round(response.rating)];
   });
 
@@ -71,7 +73,7 @@ function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
 	};
 
   $scope.votePost = function(post, status) {
-    if (post.voteStatus !== status) {
+    if (!post.voteStatus) {
       post.voteStatus = status;
       updatePostVotes(post, status);
     }
@@ -90,7 +92,7 @@ function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
 	PostResource.fetchPosts({stallId: $scope.stallID}, function(response){
 		
     for (var i = 0; i < response.msgs.length; ++i){
-      response.msgs[i].date = moment.utc(response.msgs[i].date).format("MMM DD");
+      response.msgs[i].date = moment.utc(response.msgs[i].date).format("MMM DD. h:mA");
     }
     $scope.posts = response.msgs;
 	});
