@@ -8,15 +8,25 @@ body {
     padding-top: 50%;
 }
 
-#name {
-    font-size: 10px;
-    padding: 5px;
-}
-
 #menuBar {
     height: 40px;
 }
 
-.fi-magnifying-glass {
-    stroke: red;
+.magGlass {
+    position: absolute;
+    top: 4px;
+    right: 30px;
+    width: 30px;
+}
+
+.pencil {
+    position: absolute;
+    top: 4px;
+    right: 0px;
+}
+
+.hrMenu {
+    position: relative;
+    bottom: 20px;
+    font-weight: bold;
 }
