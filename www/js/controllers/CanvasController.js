@@ -121,7 +121,7 @@ function($scope, PostResource, $routeParams, canvasRenderer, $location) {
 		$scope.submitMessage = function() {
 			var stallId = $routeParams.stallID;
 			PostResource.createPost(
-				{stallId: $scope.stallID, 
+				{stallId: stallId, 
 				 author: $scope.author,
 				 text: $scope.text
 				},
