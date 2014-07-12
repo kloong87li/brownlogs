@@ -9,7 +9,6 @@
          ng-swipe-right="votePost(post, 'upvote')">
   		<div class="post-content" >
             <p class="postText">{{post.text}}</p>
-    		<p class="author">{{post.author}}</p>
     		<p class="date">{{post.date}}</p>
         </div>
         <div class="row">
@@ -23,6 +22,7 @@
               <span class='success round label'>-{{post.upvotes}}</span>
             </div>
           </div>
+                  <p class="author">{{post.author}}</p>
         </div>
       </div>
     </div>
