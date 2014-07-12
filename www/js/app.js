@@ -15,9 +15,9 @@ app.config(['$routeProvider',
         templateUrl: 'partials/StallProfile.html',
         controller: 'StallProfileController'
       })
-      .when('/draw', {
+      .when('/stall/:stallID/compose', {
         templateUrl: 'partials/canvas.html',
-        controller: 'CanvasController'
+        controller: 'ComposeController'
       })
   }]);
 

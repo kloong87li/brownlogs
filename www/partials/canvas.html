@@ -1,8 +1,15 @@
 
-<div data-ng-app="canvas" class="ng-scope">
-<div data-ng-controller="CanvasController" data-ng-init="init()">
+<div data-ng-app="compose" class="ng-scope">
+<div data-ng-controller="ComposeController" data-ng-init="init()">
 
-	<div id="canvas-container" class="row">
+	<div id="composePage" class="row">
+		<h2>Compose your <span class="shitty">(Shitty)</span> Message</h2>
+		<input type="text" ng-model="author" class="composeInputAuthor" placeholder="Your Name" />
+		<textarea ng-model="text" class="composeInputText" placeholder="Enter your message!"></textarea>
+		<a href="" class="button" data-ng-click="toggleCanvas()">Draw an Image!</a>
+		<a href="" class="button" data-ng-click="submitMessage()">Post!</a>
+	</div>
+	<div id="canvas-container" data-ng-show="showCanvas"class="row">
 		<center>
 		<canvas id="canvas" height="325px" width="325px">
 		</canvas>
@@ -16,6 +23,7 @@
 			<a href="" class="button" id="purple" data-ng-click="selectColor(6)"></a>
 			<a href="" class="button" id="brown" data-ng-click="selectColor(7)"></a>
 			<a href="" class="button" id="black" data-ng-click="selectColor(0)"></a>
+			<a href="" class="button" class="closeCanvasButton" data-ng-click="toggleCanvas()">Back to Compose</a>
 		</div>
 		</center>
 	</div>

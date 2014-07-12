@@ -1,4 +1,4 @@
-app.controller('CanvasController', function($scope, canvasRenderer) {
+app.controller('ComposeController', function($scope, canvasRenderer) {
 	'use strict';
 	var colors, 
 		colorValue, 
@@ -101,6 +101,12 @@ app.controller('CanvasController', function($scope, canvasRenderer) {
 				endPos.x = 0;
 				endPos.y = 0;
 			};
+		} //end Init
+
+		$scope.showCanvas = false;
+
+		$scope.toggleCanvas = function(){
+			$scope.showCanvas = !$scope.showCanvas;
 		}
 
 		$scope.selectColor = function(color) {
