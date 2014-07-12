@@ -89,36 +89,23 @@
   height: 2rem;
 }
 
-#stallProfileContainer .post-button-bar .upvote-btn {
-  display: inline-block;
-  float: right;
-  width: 50%;
-  height: 100%;
-  background-color: #A5FF99;
-  text-align: center;
-}
-
-#stallProfileContainer .post-button-bar .downvote-btn {
-  display: inline-block;
-  float: left;
-  width: 50%;
-  height: 100%;
-  background-color: #FFB0B0;
-  text-align: center;
-}
-
-#stallProfileContainer .post-button-bar.upvote .upvote-btn {
-  background-color: #3DD900;
-}
-
-#stallProfileContainer .post-button-bar.downvote .downvote-btn {
-  background-color: #F70000;
-}
-
-#stallProfileContainer .likeIcon {
+#stallProfileContainer .likeIcon,.dislikeIcon {
     width: 40px;
+    opacity: .5;
 }
 
-#stallProfileContainer .dislikeIcon {
-    width: 40px;
+#stallProfileContainer .upvote .likeIcon {
+    opacity: 1;
+}
+
+#stallProfileContainer .downvote .likeIcon {
+    opacity: .2;
+}
+
+#stallProfileContainer .downvote .dislikeIcon {
+    opacity: 1;
+}
+
+#stallProfileContainer .upvote .dislikeIcon {
+    opacity: .2;
 }
