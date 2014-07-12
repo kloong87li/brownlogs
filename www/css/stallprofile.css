@@ -49,6 +49,14 @@
 	font-size: 0.6rem;
 	margin-left: 1rem;
 }
+/*#stallProfileContainer #postBar.ng-hide,{
+  transition: all 0.5s ease-out;
+}*/
+
+#stallProfileContainer #postBar.ng-hide-add,
+#stallProfileContainer #postBar.ng-hide-remove{
+  transition: all 0.5s ease-out;
+}
 #stallProfileContainer #postBar{
 	position: fixed;
 	bottom: 0;
@@ -58,6 +66,7 @@
 	margin: 0;
 	text-align: center;
 	background-color: #BFA789;
+	transition: all 0.5s ease-in;
 }
 #stallProfileContainer .ratingBar{
 	font-style: italic;
