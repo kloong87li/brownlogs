@@ -53,3 +53,12 @@ body {
     bottom: 20px;
     font-weight: bold;
 }
+
+.miniLog {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    margin-right: 40px;
+    display: inline;
+
+}

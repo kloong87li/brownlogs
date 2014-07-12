@@ -65,4 +65,5 @@ canvas {
 .button {
 	border-style: none;
 	padding: 1rem !important;
+    width: 49%;
 }
