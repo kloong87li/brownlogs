@@ -11,7 +11,7 @@
 		<div ng-include src="'partials/PostsTemplate.html'">
 
 		</div>
-		<div id="postBar">
+		<div id="postBar" ng-show="scrollingUp">
 			<input type="text" class="writePostInput" placeholder="Write a post" />
 			<a href="/draw" class="button tiny canvasLinkButton">+</a>
 			<input type="submit" class="submitPost button tiny" value="&gt;" />
