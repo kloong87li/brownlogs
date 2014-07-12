@@ -7,12 +7,16 @@
 	<div class="post">
 		<div class="stallInfo">
 			<div class="row">
-					<img class="stallImage" src="{{stallImage}}" alt="Staff Profile Picture" class="staffProfilePicture" />
+					<img class="stallImage" src="{{stallImage}}" alt="Stall Profile Picture" class="stallProfilePicture" />
 			</div>
 
 			<div class="row">
                 <center>
-					<p class="stallDescription">{{stallFloor}}</p>
+					<p class="stallDescription">
+						<h3>{{stallBuilding}}, Floor {{stallFloor}}</h3>
+						<br>
+						({{stallGender}})
+					</p>
                     <p>What people think: <span class="ratingNum">{{ratingNum}}/5,</span>&nbsp;<span class="ratingDesc">{{ratingDesc}}</span></p>				
                 </center>
 			</div>

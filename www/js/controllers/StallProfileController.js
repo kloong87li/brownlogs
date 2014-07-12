@@ -13,9 +13,11 @@ function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
 
   StallsResource.fetchSingleStall({stallId: $scope.stallID}, function(response){
     $scope.stallName = response.name;
+    $scope.stallBuilding = response.building;
     $scope.stallFloor = response.floor;
     $scope.ratingNum = response.rating;
     $scope.stallImage = response.pictureUrl;
+    $scope.stallGender = response.gender;
     $scope.ratingDesc = ratingMap[Math.round(response.rating)];
   });
 
