@@ -77,6 +77,7 @@ function($scope, $routeParams, $window, PostResource, $swipe) {
 	
 	PostResource.fetchPosts({stallId: $scope.stallID}, function(response){
 		$scope.posts = response.msgs;
+    console.log(response);
 	});
 
 }]);
