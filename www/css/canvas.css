@@ -1,3 +1,17 @@
+
+#composePage{
+	position: absolute;
+	top: 20%;
+	padding: 2rem;
+}
+
+.shitty{
+	color: #3A1F0A;
+}
+.composeInputText{
+	height: 10rem;
+}
+
 #black {
 	background-color: #000000;
 }

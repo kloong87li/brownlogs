@@ -1,5 +1,5 @@
-app.controller('CanvasController', ['$scope', 'PostResource', '$routeParams', 'canvasRenderer',
-function($scope, PostResource, $routeParams, canvasRenderer) {
+app.controller('ComposeController', ['$scope', 'PostResource', '$routeParams', 'canvasRenderer', '$location',
+function($scope, PostResource, $routeParams, canvasRenderer, $location) {
 	'use strict';
 	var colors, 
 		colorValue, 
@@ -102,6 +102,12 @@ function($scope, PostResource, $routeParams, canvasRenderer) {
 				endPos.x = 0;
 				endPos.y = 0;
 			};
+		} //end Init
+
+		$scope.showCanvas = false;
+
+		$scope.toggleCanvas = function(){
+			$scope.showCanvas = !$scope.showCanvas;
 		}
 
 		$scope.selectColor = function(color) {
@@ -109,10 +115,10 @@ function($scope, PostResource, $routeParams, canvasRenderer) {
 			$scope.colorCss = colors[colorNumber];
 		};
 
-		$score.author = '';
+		$scope.author = '';
 		$scope.text = '';
 
-		$scope.submitPost = function() {
+		$scope.submitMessage = function() {
 			var stallId = $routeParams.stallID;
 			PostResource.createPost(
 				{stallId: $scope.stallID, 
@@ -121,6 +127,7 @@ function($scope, PostResource, $routeParams, canvasRenderer) {
 				},
 	    function(response){
 	      console.log('post submitted');
+	      $location.href = "/stall/" + $scope.stallID;
 	    });
 		}
 }]);
