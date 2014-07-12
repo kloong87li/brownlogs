@@ -52,14 +52,13 @@
 canvas {
 	background-color: #fff;
 	margin-bottom: 20px;
+	margin-top: 6rem;
 }
-
 #canvas-container {
 	background-color: #fcfbe3;
 	position: absolute;
 	margin-bottom: 0rem;
 	padding: 0rem;
-	padding-top: 25%;
 	min-height: 100%;
 }
 
