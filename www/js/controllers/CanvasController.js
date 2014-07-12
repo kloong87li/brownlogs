@@ -1,4 +1,5 @@
-app.controller('CanvasController', function($scope, canvasRenderer) {
+app.controller('CanvasController', ['$scope', 'PostResource', '$routeParams', 'canvasRenderer',
+function($scope, PostResource, $routeParams, canvasRenderer) {
 	'use strict';
 	var colors, 
 		colorValue, 
@@ -107,7 +108,22 @@ app.controller('CanvasController', function($scope, canvasRenderer) {
 			colorNumber = color;
 			$scope.colorCss = colors[colorNumber];
 		};
-});
+
+		$score.author = '';
+		$scope.text = '';
+
+		$scope.submitPost = function() {
+			var stallId = $routeParams.stallID;
+			PostResource.createPost(
+				{stallId: $scope.stallID, 
+				 author: $scope.author,
+				 text: $scope.text
+				},
+	    function(response){
+	      console.log('post submitted');
+	    });
+		}
+}]);
 
 app.factory('canvasRenderer', function () {
 	'use strict';
