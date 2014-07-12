@@ -89,32 +89,6 @@
   height: 2rem;
 }
 
-#stallProfileContainer .post-button-bar .upvote-btn {
-  display: inline-block;
-  float: right;
-  width: 50%;
-  height: 100%;
-  background-color: #A5FF99;
-  text-align: center;
-}
-
-#stallProfileContainer .post-button-bar .downvote-btn {
-  display: inline-block;
-  float: left;
-  width: 50%;
-  height: 100%;
-  background-color: #FFB0B0;
-  text-align: center;
-}
-
-#stallProfileContainer .post-button-bar.upvote .upvote-btn {
-  background-color: #3DD900;
-}
-
-#stallProfileContainer .post-button-bar.downvote .downvote-btn {
-  background-color: #F70000;
-}
-
 #stallProfileContainer .likeIcon {
     width: 40px;
 }
