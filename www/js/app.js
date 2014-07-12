@@ -6,17 +6,14 @@ app.config(['$routeProvider',
     .when('/', {
         templateUrl: 'partials/main.html',
         controller: 'MainController'
-<<<<<<< HEAD
       }).
       when('/browseStalls', {
         templateUrl: 'partials/browseStalls.html',
         controller: 'MainController'
-=======
       })
       .when('/stall/:stallID', {
         templateUrl: 'partials/StallProfile.html',
         controller: 'StallProfileController'
->>>>>>> dd5e0b90d18bc51df17bf898199a4e71f0a96b3d
       });
   }]);
 
