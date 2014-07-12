@@ -15,11 +15,10 @@
 #stallProfileContainer .post{
 	position: relative;
 	width: 100%;
-	border-bottom: 2px solid #000;
+	border-bottom: 1px solid #333;
 	padding-bottom: 1rem;
 }
 #stallProfileContainer .post h2{
-	border-bottom: 1px solid #000;
 }
 #stallProfileContainer .post-content{
   padding-left: 1rem;
@@ -32,13 +31,6 @@
 }
 #stallProfileContainer .author, #stallProfileContainer .date{
 	color: #888;
-	margin: 0;
-}
-
-#stallProfileContainer .date{
-	position: absolute;
-	top: 0.5rem;
-	right: 0.8rem;
 }
 
 #stallProfileContainer #postBar.ng-hide-add,
@@ -100,4 +92,8 @@
 #stallProfileContainer .stallImage {
     width: 100%;
     height: 100%;
+}
+
+#stallProfileContainer .stallName {
+    font-family: 'Oswald', sans-serif;
 }
