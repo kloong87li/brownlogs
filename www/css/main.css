@@ -2,6 +2,10 @@ body {
     background-color: #FCFBE3;
 }
 
+.logo {
+    padding-top: 75px;
+}
+
 .content {
     width: 100%;
     height: 100%;
