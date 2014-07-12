@@ -9,24 +9,42 @@
 		<a href="" class="button" data-ng-click="toggleCanvas()">Draw an Image!</a>
 		<a href="" class="button" data-ng-click="submitMessage()">Post!</a>
 	</div>
-	<div id="canvas-container" data-ng-show="showCanvas" class="row">
-		<center>
-		<canvas id="canvas" height="325px" width="325px">
-		</canvas>
-
-		<div id="colorPicker">
-			<a href="" class="button" id="red" data-ng-click="selectColor(1)"></a>
-			<a href="" class="button" id="orange" data-ng-click="selectColor(2)"></a>
-			<a href="" class="button" id="yellow" data-ng-click="selectColor(3)"></a>
-			<a href="" class="button" id="green" data-ng-click="selectColor(4)"></a>
-			<a href="" class="button" id="blue" data-ng-click="selectColor(5)"></a>
-			<a href="" class="button" id="purple" data-ng-click="selectColor(6)"></a>
-			<a href="" class="button" id="brown" data-ng-click="selectColor(7)"></a>
-			<a href="" class="button" id="black" data-ng-click="selectColor(0)"></a>
-			<a href="" class="button" id="eraser" data-ng-click="selectColor(8)"></a>
-			<a href="" class="button" class="closeCanvasButton" data-ng-click="toggleCanvas()">Back to Compose</a>
+	<div id="canvas-container" data-ng-show="showCanvas">
+		<div class="row">
+		<div class="small-12 small-centered columns text-center">
+			<canvas id="canvas" height="300px" width="300px">
+			</canvas>
 		</div>
-		</center>
+		</div>
+		<div class="row">
+		<div class="small-12 small-centered columns text-center">
+			<div id="colorPicker">
+				<a href="" class="button" id="red" data-ng-click="selectColor(1)"></a>
+				<a href="" class="button" id="orange" data-ng-click="selectColor(2)"></a>
+				<a href="" class="button" id="yellow" data-ng-click="selectColor(3)"></a>
+				<a href="" class="button" id="green" data-ng-click="selectColor(4)"></a>
+				<a href="" class="button" id="blue" data-ng-click="selectColor(5)"></a>
+				<a href="" class="button" id="purple" data-ng-click="selectColor(6)"></a>
+				<a href="" class="button" id="brown" data-ng-click="selectColor(7)"></a>
+				<a href="" class="button" id="black" data-ng-click="selectColor(0)"></a>
+			</div>
+		</div>
+		</div>
+
+		<div class="row">
+		<div class="small-12 small-centered columns text-center" click="selectColor(8)">
+<!-- 			<a href="" class="button tiny" id="eraserA" data-ng-click="selectColor(8)">
+ -->			
+ <img id="eraser" src="img/icons/eraser.png" ng-click="selectColor(8)"/>
+			<!-- </a> -->
+		</div>
+		</div>
+
+		<div class="row">
+			<div class="small-10 column small-centered">
+				<a href="" class="button expand" class="closeCanvasButton" data-ng-click="toggleCanvas()">Back to Compose</a>
+			</div>
+		</div>
 	</div>
 
 </div>
