@@ -7,32 +7,32 @@ function($scope, $routeParams, $window, PostResource, $swipe) {
 	$scope.ratingNum = 3;
 	$scope.ratingDesc = 'Not Shitty';
 
-	$scope.posts = [
-		{
-			text: 'This is a nice post wassup yolo swag 123 hahha',
-			author: 'Anonymous',
-			date: 'March 20',
-      upvotes: 5,
-      downvotes: 4,
-      voteStatus: null
-		}, 
-		{
-			text: 'Ken Li, Deeedodeebododoasdfajdlf lololool',
-			author: 'Ken Li',
-			date: 'July 3',
-      upvotes: 0,
-      downvotes: 1,
-      voteStatus: null
-		}, 
-  	{
-  		text: 'This is a nice post wassup yolo swag 123 hahha',
-  		author: 'Joyce Wang',
-  		date: 'August 10',
-      upvotes: 9900,
-      downvotes: 4,
-      voteStatus: null
-  	}
-  ];
+	// $scope.posts = [
+	// 	{
+	// 		text: 'This is a nice post wassup yolo swag 123 hahha',
+	// 		author: 'Anonymous',
+	// 		date: 'March 20',
+ //      upvotes: 5,
+ //      downvotes: 4,
+ //      voteStatus: null
+	// 	}, 
+	// 	{
+	// 		text: 'Ken Li, Deeedodeebododoasdfajdlf lololool',
+	// 		author: 'Ken Li',
+	// 		date: 'July 3',
+ //      upvotes: 0,
+ //      downvotes: 1,
+ //      voteStatus: null
+	// 	}, 
+ //  	{
+ //  		text: 'This is a nice post wassup yolo swag 123 hahha',
+ //  		author: 'Joyce Wang',
+ //  		date: 'August 10',
+ //      upvotes: 9900,
+ //      downvotes: 4,
+ //      voteStatus: null
+ //  	}
+ //  ];
 
 	$scope.scrollYPos = 0;
 	$scope.prevYPos = 0;
@@ -53,31 +53,25 @@ function($scope, $routeParams, $window, PostResource, $swipe) {
 		$scope.prevYPos = $scope.scrollYPos;
 	};
 
-  // PostResource.fetchPosts({stallId: $scope.stallID}, function(posts){
-  //   $scope.posts = posts;
-  //   console.log(posts);
-  // });
-
   $scope.votePost = function(post, status) {
-    if (post.voteStatus === status)
-      post.voteStatus = null;
-    else
+    if (post.voteStatus !== status) {
       post.voteStatus = status;
-    updatePostVotes(post, status);
+      updatePostVotes(post, status);
+    }
   }
 
   function updatePostVotes(post, status) {
-    if (post.status === 'upvote')
-      post.upvotes++;
-    else
-      post.downvotes++;
+    PostResource.votePost({stallId: $scope.stallID, msgId: post.id, voteAction: status}, 
+    function(response){
+      console.log(post);
+      post[status + 's']++;
+    });
   }
 
 	angular.element($window).bind('scroll', $scope.detectScrollDir);
 	
 	PostResource.fetchPosts({stallId: $scope.stallID}, function(response){
 		$scope.posts = response.msgs;
-    console.log(response);
 	});
 
 }]);

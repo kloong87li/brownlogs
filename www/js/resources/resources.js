@@ -1,12 +1,13 @@
 //resources.js
 
 app.factory('PostResource', ['$resource', function($resource){
-  return $resource('http://www.brownlog.com/api/venues/:vId/stalls/:stallId/msgs/:mId', 
-    {vId: 0},
+  return $resource('http://www.brownlog.com/api/venues/:vId/stalls/:stallId/msgs/:msgId/:voteAction', 
+    {vId: 0, stallId: '@stallId', msgId: '@msgId', voteAction: '@voteAction'},
     {
       fetchSinglePost: {method: 'GET'},
       fetchPosts: {method: 'GET'},
-      createPost: {method: 'POST'}
+      createPost: {method: 'POST'},
+      votePost: {method: 'POST'}
     });
 }]);
 

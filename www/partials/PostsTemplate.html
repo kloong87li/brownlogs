@@ -11,10 +11,10 @@
       <div class="post-button-bar clearfix" 
            ng-class="post.voteStatus">
         <div class="upvote-btn" ng-click="votePost(post, 'upvote')">
-          [Y]
+          [Y {{post.upvotes}}]
         </div>
         <div class="downvote-btn" ng-click="votePost(post, 'downvote')">
-          [N]
+          [N {{post.downvotes}}]
         </div>
       </div>
     </div>
