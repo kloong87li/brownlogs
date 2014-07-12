@@ -1,4 +1,5 @@
-app.controller('StallProfileController', ['$scope', '$routeParams', '$window', function($scope, $routeParams, $window) {
+app.controller('StallProfileController', ['$scope', '$routeParams', '$window', 
+function($scope, $routeParams, $window) {
 	$scope.stallName = 'Royal Toilet of Sir Jonathan Poon';
 	$scope.stallDesc = 'This is the toilet of Sir Jonathan Poon. In the 20 year history of this toilet, it has been used thousands of times. Attempts to renovate this toilet has been denied by Sir Jonathan Poon. It may not function as well as modern toilets, but it has the blessings of Sir Johnathan Poon. Use with caution.';
 	$scope.ratingNum = 3;
@@ -6,43 +7,68 @@ app.controller('StallProfileController', ['$scope', '$routeParams', '$window', f
 
 	$scope.posts = [
 		{
-			content: 'This is a nice post wassup yolo swag 123 hahha',
+			text: 'This is a nice post wassup yolo swag 123 hahha',
 			author: 'Anonymous',
-			date: 'March 20'
+			date: 'March 20',
+      upvotes: 5,
+      downvotes: 4,
+      voteStatus: null
 		}, 
 		{
-			content: 'Ken Li, Deeedodeebododoasdfajdlf lololool',
+			text: 'Ken Li, Deeedodeebododoasdfajdlf lololool',
 			author: 'Ken Li',
-			date: 'July 3'
+			date: 'July 3',
+      upvotes: 0,
+      downvotes: 1,
+      voteStatus: null
 		}, 
-	{
-			content: 'This is a nice post wassup yolo swag 123 hahha',
-			author: 'Joyce Wang',
-			date: 'August 10'
-		}
-	  ];
+  	{
+  		text: 'This is a nice post wassup yolo swag 123 hahha',
+  		author: 'Joyce Wang',
+  		date: 'August 10',
+      upvotes: 9900,
+      downvotes: 4,
+      voteStatus: null
+  	}
+  ];
 
 	$scope.scrollYPos = 0;
 	$scope.prevYPos = 0;
 	$scope.scrollingUp = false;
 
-  	$scope.detectScrollDir = function (){
-  		var prevScrollingUp = $scope.scrollingUp;
-  		$scope.scrollYPos = $window.scrollY;
-  		if ($scope.scrollYPos < $scope.prevYPos){
-  			$scope.scrollingUp = true;
-  		}
-  		else if ($scope.scrollYPos - $scope.prevYPos > 10){
-  			$scope.scrollingUp = false;
-  		}
-  		if (prevScrollingUp != $scope.scrollingUp){
-  			$scope.$apply();
-  		}
-  		console.log($scope.scrollingUp);
-  		$scope.prevYPos = $scope.scrollYPos;
+	$scope.detectScrollDir = function (){
+		var prevScrollingUp = $scope.scrollingUp;
+		$scope.scrollYPos = $window.scrollY;
+		if ($scope.scrollYPos < $scope.prevYPos){
+			$scope.scrollingUp = true;
+		}
+		else if ($scope.scrollYPos - $scope.prevYPos > 10){
+			$scope.scrollingUp = false;
+		}
+		if (prevScrollingUp != $scope.scrollingUp){
+			$scope.$apply();
+		}
+		console.log($scope.scrollingUp);
+		$scope.prevYPos = $scope.scrollYPos;
 
-  	};
+	};
 
-  	angular.element($window).bind('scroll', $scope.detectScrollDir);
-		//console.log($routeParams);
-  }]);
+  $scope.votePost = function(post, status) {
+    if (post.voteStatus === status)
+      post.voteStatus = null;
+    else
+      post.voteStatus = status;
+    updatePostVotes(post, status);
+  }
+
+  function updatePostVotes(post, status) {
+    if (post.status === 'upvote')
+      post.upvotes++;
+    else
+      post.downvotes++;
+  }
+
+
+	angular.element($window).bind('scroll', $scope.detectScrollDir);
+	//console.log($routeParams);
+}]);
