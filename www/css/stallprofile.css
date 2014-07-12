@@ -114,3 +114,11 @@
 #stallProfileContainer .post-button-bar.downvote .downvote-btn {
   background-color: #F70000;
 }
+
+#stallProfileContainer .likeIcon {
+    width: 40px;
+}
+
+#stallProfileContainer .dislikeIcon {
+    width: 40px;
+}
