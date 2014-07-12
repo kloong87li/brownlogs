@@ -1,5 +1,5 @@
-app.controller('ComposeController', ['$scope', 'PostResource', '$routeParams', 'canvasRenderer', '$location',
-function($scope, PostResource, $routeParams, canvasRenderer, $location) {
+app.controller('ComposeController', ['$scope', 'PostResource', '$routeParams', 'canvasRenderer', '$window',
+function($scope, PostResource, $routeParams, canvasRenderer, $window) {
 	'use strict';
 	var colors, 
 		colorValue, 
@@ -127,7 +127,7 @@ function($scope, PostResource, $routeParams, canvasRenderer, $location) {
 				},
 	    function(response){
 	      console.log('post submitted');
-	      $location.href = "/stall/" + $scope.stallID;
+	      $window.location.href = "#/stall/" + $routeParams	.stallID;
 	    });
 		}
 }]);
@@ -148,8 +148,13 @@ app.factory('canvasRenderer', function () {
 
 			context.beginPath();					
 			context.lineCap = 'round';
-			context.lineWidth = '5';
 			context.strokeStyle = data.Color;
+			if (data.Color == '#ffffff') {
+				context.lineWidth = '20';
+			}
+			else {
+				context.lineWidth = '5';
+			}
 			context.moveTo(data.Points[0].x, data.Points[0].y);
 			for (i = 0; i < data.Points.length; i++) {
 				context.lineTo(data.Points[i].x, data.Points[i].y);

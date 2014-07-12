@@ -45,8 +45,8 @@
 }
 
 #eraser {
-	background: url(/img/icons/eraser.png) no-repeat;
-	background-size: 2rem;
+	width: 2.5rem;
+	margin-bottom: 5px;
 }
 
 canvas {
@@ -58,8 +58,8 @@ canvas {
 	background-color: #fcfbe3;
 	position: absolute;
 	top: 3rem;
-	margin-bottom: 4rem;
-	padding: 2rem;
+	margin-bottom: 0rem;
+	padding: 0rem;
 }
 
 .button {
