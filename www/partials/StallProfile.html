@@ -1,16 +1,33 @@
 <div id="stallProfileContainer">
-	<h1>{{stallName}}</h1>
+	<div class="row">
+		<div class="small-12 small-centered columns">
+			<h1>{{stallName}}</h1>
+		</div>
+	</div>
 	<div class="post">
 		<div class="stallInfo">
-			<img src="http://media.treehugger.com/assets/images/2011/10/toilet-llqq-001.jpg" alt="Staff Profile Picture" class="staffProfilePicture" />
-			<p class="stallDescription">{{stallDesc}}</p>
-			<div class="ratingBar">
-				<p>What people think: <span class="ratingDesc">{{ratingDesc}}</span>&nbsp;<span class="ratingNum">{{ratingNum}}/5</span></p>				
+			<div class="row">
+				<div class="small-12 small-centered columns text-center">
+					<img src="http://media.treehugger.com/assets/images/2011/10/toilet-llqq-001.jpg" alt="Staff Profile Picture" class="staffProfilePicture" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-12 columns">
+					<p class="stallDescription">{{stallDesc}}</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns ratingBar">
+						<p>What people think: <span class="ratingDesc">{{ratingDesc}}</span>&nbsp;<span class="ratingNum">{{ratingNum}}/5</span></p>				
+					</div>
 			</div>
 		</div>
+
 		<div ng-include src="'partials/PostsTemplate.html'">
 
 		</div>
+		
 		<div id="postBar" ng-show="scrollingUp">
 			<input type="text" class="writePostInput" placeholder="Write a post" />
 			<a href="#/draw" class="button tiny canvasLinkButton">+</a>
