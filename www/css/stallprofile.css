@@ -119,3 +119,15 @@
 #stallProfileContainer .upvote .dislikeIcon {
     opacity: .2;
 }
+<<<<<<< HEAD
+=======
+
+#stallProfileContainer .stallImage {
+    width: 100%;
+    height: 100%;
+}
+
+#stallProfileContainer .stallName {
+    font-family: 'Oswald', sans-serif;
+}
+>>>>>>> 10ed052339358cf5b3109795879da4fef776946c

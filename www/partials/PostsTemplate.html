@@ -16,13 +16,14 @@
         <div class="row">
           <div class="post-button-bar clearfix" 
                ng-class="post.voteStatus">
-            <div class="small-7 small-centered columns">
+               <center>
               <span class='alert round label'>-{{post.downvotes}}</span>
               <img class='dislikeIcon' src='lib/foundation-icons/svgs/fi-dislike.svg' ng-click="votePost(post, 'downvote')">
               <img class='likeIcon' src='lib/foundation-icons/svgs/fi-like.svg' ng-click="votePost(post, 'upvote')">
               <span class='success round label'>+{{post.upvotes}}</span>
+                          <p class="author">{{post.author}} - {{post.date}}</p>
             </div>
-            <p class="author">{{post.author}} - {{post.date}}</p>
+          </center>
         </div>
       </div>
     </div>
