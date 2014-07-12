@@ -34,9 +34,9 @@ body {
 .search {
     position: absolute;
     top: 5px;
-    right: 30px;
+    right: 0px;
     width: 30px;
-    margin-right: 40px;
+    margin-right: 10px;
     display: inline;
 }
 
@@ -52,4 +52,13 @@ body {
     position: relative;
     bottom: 20px;
     font-weight: bold;
+}
+
+.miniLog {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    margin-right: 40px;
+    display: inline;
+
 }
