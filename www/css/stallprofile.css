@@ -19,7 +19,6 @@
 	padding-bottom: 1rem;
 }
 #stallProfileContainer .evenPost{
-	background-color: #EEE;
 }
 #stallProfileContainer .post h2{
 }
@@ -73,11 +72,11 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	padding-top: 1rem;
 	margin: 0;
 	text-align: center;
-	background-color: #BFA789;
 	transition: all 0.5s ease-in;
+    background-color: #333333;
+    padding:0;
 }
 #stallProfileContainer .ratingBar{
 	font-style: italic;
@@ -119,8 +118,6 @@
 #stallProfileContainer .upvote .dislikeIcon {
     opacity: .2;
 }
-<<<<<<< HEAD
-=======
 
 #stallProfileContainer .stallImage {
     width: 100%;
@@ -130,4 +127,3 @@
 #stallProfileContainer .stallName {
     font-family: 'Oswald', sans-serif;
 }
->>>>>>> 10ed052339358cf5b3109795879da4fef776946c
