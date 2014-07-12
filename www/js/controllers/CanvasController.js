@@ -1,5 +1,5 @@
-app.controller('ComposeController', ['$scope', 'PostResource', '$routeParams', 'canvasRenderer', '$location',
-function($scope, PostResource, $routeParams, canvasRenderer, $location) {
+app.controller('ComposeController', ['$scope', 'PostResource', '$routeParams', 'canvasRenderer', '$window',
+function($scope, PostResource, $routeParams, canvasRenderer, $window) {
 	'use strict';
 	var colors, 
 		colorValue, 
@@ -127,7 +127,7 @@ function($scope, PostResource, $routeParams, canvasRenderer, $location) {
 				},
 	    function(response){
 	      console.log('post submitted');
-	      $location.href = "/stall/" + $scope.stallID;
+	      $window.location.href = "#/stall/" + $routeParams.stallID;
 	    });
 		}
 }]);
