@@ -1,0 +1,39 @@
+#black {
+	background-color: #000000;
+}
+
+#red {
+	background-color: #ff0000;
+}
+
+#orange {
+	background-color: #ff6600;
+}
+
+#yellow {
+	background-color: #fff44f;
+}
+
+#green {
+	background-color: #009900;
+}
+
+#blue {
+	background-color: #0033ee;
+}
+
+#purple {
+	background-color: #5500ff;
+}
+
+#brown {
+	background-color: #5e2e0d;
+}
+
+#container {
+	background-color: #fcfbe3;
+}
+
+canvas {
+	background-color: #fff;
+}

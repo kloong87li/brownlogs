@@ -8,12 +8,13 @@
 				<p>What people think: <span class="ratingDesc">{{ratingDesc}}</span>&nbsp;<span class="ratingNum">{{ratingNum}}/5</span></p>				
 			</div>
 		</div>
-		<div class="postsContainer">
+		<div ng-include src="'partials/PostsTemplate.html'">
 
 		</div>
-		<div id="postBar">
-			<input type="text" class="text" placeholder="Write a post" />
-			<a href="/draw" class="button canvasLinkButton">+</a>
+		<div id="postBar" ng-show="scrollingUp">
+			<input type="text" class="writePostInput" placeholder="Write a post" />
+			<a href="#/draw" class="button tiny canvasLinkButton">+</a>
+			<input type="submit" class="submitPost button tiny" value="&gt;" />
 		</div>
 	</div>
 </div>
