@@ -26,26 +26,17 @@
         <link rel="stylesheet" type="text/css" href="css/imports.css" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src='lib/foundation/js/foundation.min.js'></script>
-        <title>Hello World</title>
+        <title>The Brown Log</title>
     </head>
     <body ng-app="brownLogApp">
         <div class='row'>
             <div class='fixed'>
-                <nav id='topBar' class='top-bar' data-topbar>
-                    <ul class='title-area'>
-                        <li class='name'>
-                            <h1><a href='#'>The Brown Log</a></h1>
-                        </li>
-                        <li class='toggle-topbar menu-icon'><a href='#'><span>Menu</span></a></li>
+                <div id='menuBar'>
+                    <ul class='right'>
+                        <a href="#"><img src='/lib/foundation-icons/svgs/fi-magnifying-glass.svg' width='40px'></a>
+                        <a href="#"><img src='/lib/foundation-icons/svgs/fi-pencil.svg' width='40px'></a>
                     </ul>
-                    <section class='top-bar-section'>
-                        <ul class='right'>
-                            <li><a href="#">Browse</a></li>
-                            <li><a href="#">Post</a></li>
-                        </ul>
-                    </section>
-                </nav>
+                </div>
             </div>
         </div>
         <div class='row'>
@@ -65,6 +56,8 @@
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/controllers/MainController.js"></script>
         <script type="text/javascript" src="js/controllers/StallProfileController.js"></script>
+        <script src='lib/foundation/js/foundation.min.js'></script>
+        <script src='lib/foundation/js/foundation/foundation.topbar.js'></script>
         <script type="text/javascript" src="js/controllers/CanvasController.js"></script>
         <script type="text/javascript">
             app.initialize();
