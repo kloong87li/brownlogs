@@ -1,5 +1,5 @@
-app.controller('StallProfileController', ['$scope', '$routeParams', '$window', 'PostResource', 
-function($scope, $routeParams, $window, PostResource) {
+app.controller('StallProfileController', ['$scope', '$routeParams', '$window', 'PostResource', '$swipe',
+function($scope, $routeParams, $window, PostResource, $swipe) {
 	$scope.stallID = $routeParams.stallID;
 
 	$scope.stallName = 'Royal Toilet of Sir Jonathan Poon';
@@ -50,14 +50,13 @@ function($scope, $routeParams, $window, PostResource) {
 		if (prevScrollingUp != $scope.scrollingUp){
 			$scope.$apply();
 		}
-		console.log($scope.scrollingUp);
 		$scope.prevYPos = $scope.scrollYPos;
 	};
 
-  PostResource.fetchPosts({stallId: $scope.stallID}, function(posts){
-    $scope.posts = posts;
-    console.log(posts);
-  });
+  // PostResource.fetchPosts({stallId: $scope.stallID}, function(posts){
+  //   $scope.posts = posts;
+  //   console.log(posts);
+  // });
 
   $scope.votePost = function(post, status) {
     if (post.voteStatus === status)

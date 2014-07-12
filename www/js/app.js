@@ -1,4 +1,4 @@
-var app = angular.module('brownLogApp', ['ngRoute', 'ngResource']);
+var app = angular.module('brownLogApp', ['ngRoute', 'ngResource', 'ngTouch']);
 
 app.config(['$routeProvider',
   function($routeProvider) {
