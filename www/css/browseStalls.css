@@ -1,6 +1,7 @@
 #stallsBar {
     position:fixed;
     top:40px;
+    z-index: 1000;
 }
 
 #stallsContainer {

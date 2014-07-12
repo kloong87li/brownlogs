@@ -20,4 +20,5 @@
     color: #AB5262;
     margin:0;
     float: right;
+    z-index: 10;
 }
