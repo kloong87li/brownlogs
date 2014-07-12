@@ -6,6 +6,10 @@ app.config(['$routeProvider',
       when('/', {
         templateUrl: 'partials/main.html',
         controller: 'MainController'
+      }).
+      when('/browseStalls', {
+        templateUrl: 'partials/browseStalls.html',
+        controller: 'MainController'
       });
   }]);
 

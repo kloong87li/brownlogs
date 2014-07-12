@@ -32,6 +32,24 @@
     </head>
     <body ng-app="brownLogApp">
         <div class='row'>
+            <div class='fixed'>
+                <nav id='topBar' class='top-bar' data-topbar>
+                    <ul class='title-area'>
+                        <li class='name'>
+                            <h1><a href='#'>The Brown Log</a></h1>
+                        </li>
+                        <li class='toggle-topbar menu-icon'><a href='#'><span>Menu</span></a></li>
+                    </ul>
+                    <section class='top-bar-section'>
+                        <ul class='right'>
+                            <li><a href="#">Browse</a></li>
+                            <li><a href="#">Post</a></li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+        </div>
+        <div class='row'>
             <div class='small-10 small-centered columns'>
                 <div class='content'>
                     <div ng-view>
