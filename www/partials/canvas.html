@@ -1,0 +1,20 @@
+<div data-ng-app="canvas" class="ng-scope">
+<div data-ng-controller="CanvasController" data-ng-init="init()">
+	<canvas id="canvas" height="325px" width="325px">
+	</canvas>
+
+	<span><button data-ng-click="undo()">Undo</button></span>
+
+	<div id="colorPicker">
+		<button  class="black" data-ng-click="selectColor(0)"></button>
+		<button class="red" data-ng-click="selectColor(1)"></button>
+		<button class="orange" data-ng-click="selectColor(2)"></button>
+		<button class="yellow" data-ng-click="selectColor(3)"></button>
+		<button class="green" data-ng-click="selectColor(4)"></button>
+		<button class="blue" data-ng-click="selectColor(5)"></button>
+		<button class="purple" data-ng-click="selectColor(6)"></button>
+		<button class="brown" data-ng-click="selectColor(7)"></button>
+	</div>
+
+</div>
+</div>
