@@ -29,7 +29,7 @@ app.controller('CanvasController', function($scope, canvasRenderer) {
 			var offset;
 
 			colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown'];
-			colorValue = ['#000000', '#ff0000', '#ff6600', '#ffff00', '#009900', '#0033ee', '#5500ff', '#5e2e0d'];
+			colorValue = ['#000000', '#ff0000', '#ff6600', '#fff44f', '#009900', '#0033ee', '#5500ff', '#5e2e0d'];
 		    drawArea = document.getElementById("canvas");
 		    context = drawArea.getContext("2d");
 		    canvasRenderer.setContext(context);

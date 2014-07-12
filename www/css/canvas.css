@@ -1,31 +1,39 @@
-.black {
+#black {
 	background-color: #000000;
 }
 
-.red {
+#red {
 	background-color: #ff0000;
 }
 
-.orange {
+#orange {
 	background-color: #ff6600;
 }
 
-.yellow {
-	background-color: #ffff00;
+#yellow {
+	background-color: #fff44f;
 }
 
-.green {
+#green {
 	background-color: #009900;
 }
 
-.blue {
+#blue {
 	background-color: #0033ee;
 }
 
-.purple {
+#purple {
 	background-color: #5500ff;
 }
 
-.brown {
+#brown {
 	background-color: #5e2e0d;
+}
+
+#container {
+	background-color: #fcfbe3;
+}
+
+canvas {
+	background-color: #fff;
 }
