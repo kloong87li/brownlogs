@@ -10,10 +10,11 @@
   		<div class="post-content" >
             <p class="postText">{{post.text}}</p>
             <img class="postImage" data-ng-show="post.image" src="{{post.image}}" />
+
+            <p class="author">{{post.author}}</p>
     		<p class="date">{{post.date}}</p>
         </div>
         <div class="row">
-        <div class="small-12 columns">
           <div class="post-button-bar clearfix" 
                ng-class="post.voteStatus">
             <div class="small-7 small-centered columns">
@@ -22,8 +23,6 @@
               <img class='likeIcon' src='lib/foundation-icons/svgs/fi-like.svg' ng-click="votePost(post, 'upvote')">
               <span class='success round label'>-{{post.upvotes}}</span>
             </div>
-          </div>
-                  <p class="author">{{post.author}}</p>
         </div>
       </div>
     </div>
