@@ -11,6 +11,7 @@
 #stallsContainer .stall {
   border-bottom: 1px solid lightgrey;
   padding: 1rem;
+  clear: both;
 }
 
 #stallsBar .item * {
