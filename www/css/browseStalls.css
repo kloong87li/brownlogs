@@ -9,10 +9,8 @@
 }
 
 #stallsContainer .stall {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid lightgrey;
   padding: 1rem;
-
 }
 
 #stallsBar .item * {
