@@ -1,11 +1,19 @@
-app.controller('StallProfileController', ['$scope', '$routeParams', '$window', 'PostResource', '$swipe',
-function($scope, $routeParams, $window, PostResource, $swipe) {
+app.controller('StallProfileController', ['$scope', '$routeParams', '$window', 'PostResource', 'StallsResource', '$swipe',
+function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
 	$scope.stallID = $routeParams.stallID;
 
-	$scope.stallName = 'Royal Toilet of Sir Jonathan Poon';
-	$scope.stallDesc = 'This is the toilet of Sir Jonathan Poon. In the 20 year history of this toilet, it has been used thousands of times. Attempts to renovate this toilet has been denied by Sir Jonathan Poon. It may not function as well as modern toilets, but it has the blessings of Sir Johnathan Poon. Use with caution.';
-	$scope.ratingNum = 3;
-	$scope.ratingDesc = 'Not Shitty';
+  StallsResource.fetchSingleStall({stallId: $scope.stallID}, function(response){
+    $scope.stallName = response.name;
+    $scope.stallFloor = response.floor;
+    $scope.ratingNum = response.rating;
+    $scope.stallImage = response.pictureUrl;
+    $scope.ratingDesc = 'Not Shitty';
+  });
+
+	// $scope.stallName = 'Royal Toilet of Sir Jonathan Poon';
+	// $scope.stallDesc = 'This is the toilet of Sir Jonathan Poon. In the 20 year history of this toilet, it has been used thousands of times. Attempts to renovate this toilet has been denied by Sir Jonathan Poon. It may not function as well as modern toilets, but it has the blessings of Sir Johnathan Poon. Use with caution.';
+	// $scope.ratingNum = 3;
+	// $scope.ratingDesc = 'Not Shitty';
 
 	// $scope.posts = [
 	// 	{

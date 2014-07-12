@@ -1,4 +1,5 @@
-app.controller('ComposeController', function($scope, canvasRenderer) {
+app.controller('ComposeController', ['$scope', 'PostResource', '$routeParams', 'canvasRenderer', '$location',
+function($scope, PostResource, $routeParams, canvasRenderer, $location) {
 	'use strict';
 	var colors, 
 		colorValue, 
@@ -26,8 +27,8 @@ app.controller('ComposeController', function($scope, canvasRenderer) {
 		$scope.init = function() {
 			var offset;
 
-			colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown'];
-			colorValue = ['#000000', '#ff0000', '#ff6600', '#fff44f', '#009900', '#094ecd', '#5731cc', '#5e2e0d'];
+			colors = ['black', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown', 'eraser'];
+			colorValue = ['#000000', '#ff0000', '#ff6600', '#fff44f', '#009900', '#094ecd', '#5731cc', '#5e2e0d', '#ffffff'];
 		    drawArea = document.getElementById("canvas");
 		    context = drawArea.getContext("2d");
 		    canvasRenderer.setContext(context);
@@ -113,7 +114,23 @@ app.controller('ComposeController', function($scope, canvasRenderer) {
 			colorNumber = color;
 			$scope.colorCss = colors[colorNumber];
 		};
-});
+
+		$scope.author = '';
+		$scope.text = '';
+
+		$scope.submitMessage = function() {
+			var stallId = $routeParams.stallID;
+			PostResource.createPost(
+				{stallId: $scope.stallID, 
+				 author: $scope.author,
+				 text: $scope.text
+				},
+	    function(response){
+	      console.log('post submitted');
+	      $location.href = "/stall/" + $scope.stallID;
+	    });
+		}
+}]);
 
 app.factory('canvasRenderer', function () {
 	'use strict';

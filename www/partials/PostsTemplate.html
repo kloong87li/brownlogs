@@ -8,21 +8,22 @@
     <div ng-swipe-left="votePost(post, 'downvote')"
          ng-swipe-right="votePost(post, 'upvote')">
   		<div class="post-content" >
-        <p class="postText">{{post.text}}</p>
+            <p class="postText">{{post.text}}</p>
     		<p class="author">{{post.author}}</p>
     		<p class="date">{{post.date}}</p>
-      </div>
-      <div class="row">
+        </div>
+        <div class="row">
         <div class="small-12 columns">
           <div class="post-button-bar clearfix" 
                ng-class="post.voteStatus">
-            <div class="upvote-btn" ng-click="votePost(post, 'upvote')">
-              [Y {{post.upvotes}}]
+        <div class="small-7 small-centered columns">
+            <span class='alert round label'>+{{post.downvotes}}</span>
+            <img class='dislikeIcon' src='lib/foundation-icons/svgs/fi-dislike.svg' ng-click="votePost(post, 'downvote')">
+            <img class='likeIcon' src='lib/foundation-icons/svgs/fi-like.svg' ng-click="votePost(post, 'upvote')">
+            <span class='success round label'>-{{post.upvotes}}</span>
             </div>
-            <div class="downvote-btn" ng-click="votePost(post, 'downvote')">
-              [N {{post.downvotes}}]
+
             </div>
-          </div>
         </div>
       </div>
     </div>
