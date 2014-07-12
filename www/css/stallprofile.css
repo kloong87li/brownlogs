@@ -39,12 +39,12 @@
 #stallProfileContainer .author{
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	right: 0.8rem;
 }
 #stallProfileContainer .date{
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 0.5rem;
+	right: 0.8rem;
 }
 #stallProfileContainer .author p, #stallProfileContainer .date p{
 	display: inline;

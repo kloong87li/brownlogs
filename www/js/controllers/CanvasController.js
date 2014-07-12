@@ -127,7 +127,7 @@ function($scope, PostResource, $routeParams, canvasRenderer, $window) {
 				},
 	    function(response){
 	      console.log('post submitted');
-	      $window.location.href = "#/stall/" + $routeParams.stallID;
+	      $window.location.href = "#/stall/" + $routeParams	.stallID;
 	    });
 		}
 }]);
