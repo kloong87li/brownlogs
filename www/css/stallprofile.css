@@ -18,43 +18,28 @@
 	border-bottom: 2px solid #000;
 	padding-bottom: 1rem;
 }
-#stallProfileContainer .evenPost{
-	background-color: #EEE;
-}
 #stallProfileContainer .post h2{
 	border-bottom: 1px solid #000;
 }
 #stallProfileContainer .post-content{
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   position: relative;
 }
 #stallProfileContainer .postText{
 	margin: 0;
+    padding: 0;
 }
 #stallProfileContainer .author, #stallProfileContainer .date{
-	font-size: 0.5rem;
 	color: #888;
 	margin: 0;
 }
-#stallProfileContainer .author{
-	position: absolute;
-	bottom: 0;
-	right: 0.8rem;
-}
+
 #stallProfileContainer .date{
 	position: absolute;
 	top: 0.5rem;
 	right: 0.8rem;
 }
-#stallProfileContainer .author p, #stallProfileContainer .date p{
-	display: inline;
-	margin-bottom: 2px;
-	font-size: 0.6rem;
-	margin-left: 1rem;
-}
-/*#stallProfileContainer #postBar.ng-hide,{
-  transition: all 0.5s ease-out;
-}*/
 
 #stallProfileContainer #postBar.ng-hide-add,
 #stallProfileContainer #postBar.ng-hide-remove{
@@ -92,10 +77,12 @@
 #stallProfileContainer .likeIcon,.dislikeIcon {
     width: 40px;
     opacity: .5;
+	margin: 0;
 }
 
 #stallProfileContainer .upvote .likeIcon {
     opacity: 1;
+	margin: 0;
 }
 
 #stallProfileContainer .downvote .likeIcon {
@@ -108,4 +95,9 @@
 
 #stallProfileContainer .upvote .dislikeIcon {
     opacity: .2;
+}
+
+#stallProfileContainer .stallImage {
+    width: 100%;
+    height: 100%;
 }
