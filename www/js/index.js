@@ -37,7 +37,10 @@ var app2 = {
 
 		window.plugins.webintent.getUri(function(url) {
 			if (url != undefined) {
-                window.location.hash = "#/stall/80";
+                var tail = url.match(/stall\/\d/);
+                if (tail.length > 0) {
+                    window.location.hash = "#/" + tail[0];
+                }
 			}
 		});
     },
