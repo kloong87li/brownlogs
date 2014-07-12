@@ -74,5 +74,9 @@ function($scope, $routeParams, $window, PostResource, $swipe) {
   }
 
 	angular.element($window).bind('scroll', $scope.detectScrollDir);
-	//console.log($routeParams);
+	
+	PostResource.fetchPosts({stallId: $scope.stallID}, function(response){
+		$scope.posts = response.msgs;
+	});
+
 }]);
