@@ -90,7 +90,7 @@ function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
 	PostResource.fetchPosts({stallId: $scope.stallID}, function(response){
 		
     for (var i = 0; i < response.msgs.length; ++i){
-      response.msgs[i].date = moment.utc(response.msgs[i].date).format("MMM DD");
+      response.msgs[i].date = moment.utc(response.msgs[i].date).format("MMM DD. h:mA");
     }
     $scope.posts = response.msgs;
 	});
