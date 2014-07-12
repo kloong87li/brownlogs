@@ -104,6 +104,8 @@ function($scope, PostResource, $routeParams, canvasRenderer, $window) {
 			};
 		} //end Init
 
+
+		$scope.canvas = document.querySelector('#canvas');
 		$scope.showCanvas = false;
 
 		$scope.toggleCanvas = function(){
@@ -123,10 +125,11 @@ function($scope, PostResource, $routeParams, canvasRenderer, $window) {
 			PostResource.createPost(
 				{stallId: stallId, 
 				 author: $scope.author,
-				 text: $scope.text
+				 text: $scope.text,	
+				 image: $scope.canvas.toDataURL()
 				},
 	    function(response){
-	      console.log('post submitted');
+	      console.log(response, 'post submitted');
 	      $window.location.href = "#/stall/" + $routeParams	.stallID;
 	    });
 		}
