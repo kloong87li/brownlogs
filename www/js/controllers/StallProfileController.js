@@ -1,13 +1,22 @@
 app.controller('StallProfileController', ['$scope', '$routeParams', '$window', 'PostResource', 'StallsResource', '$swipe',
 function($scope, $routeParams, $window, PostResource, StallsResource, $swipe) {
-	$scope.stallID = $routeParams.stallID;
+	var ratingMap = [
+    'Hella shitty.',
+    'Emergencies only.',
+    'Better than a porta-potty.',
+    'Meh.',
+    'Would return.',
+    'Porcelain throne.'
+  ]
+
+  $scope.stallID = $routeParams.stallID;
 
   StallsResource.fetchSingleStall({stallId: $scope.stallID}, function(response){
     $scope.stallName = response.name;
     $scope.stallFloor = response.floor;
     $scope.ratingNum = response.rating;
     $scope.stallImage = response.pictureUrl;
-    $scope.ratingDesc = 'Not Shitty';
+    $scope.ratingDesc = ratingMap[Math.round(response.rating)];
   });
 
 	// $scope.stallName = 'Royal Toilet of Sir Jonathan Poon';
