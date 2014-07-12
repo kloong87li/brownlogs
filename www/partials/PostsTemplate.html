@@ -8,7 +8,10 @@
     <div ng-swipe-left="votePost(post, 'downvote')"
          ng-swipe-right="votePost(post, 'upvote')">
   		<div class="post-content" >
-            <p class="author">{{post.author}}<p class="postText">{{post.text}}</p></p>
+            <p class="postText">{{post.text}}</p>
+            <img class="postImage" data-ng-show="post.image" src="{{post.image}}" />
+
+            <p class="author">{{post.author}}</p>
     		<p class="date">{{post.date}}</p>
         </div>
         <div class="row">
