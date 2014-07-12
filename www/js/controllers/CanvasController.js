@@ -148,8 +148,13 @@ app.factory('canvasRenderer', function () {
 
 			context.beginPath();					
 			context.lineCap = 'round';
-			context.lineWidth = '5';
 			context.strokeStyle = data.Color;
+			if (data.Color == '#ffffff') {
+				context.lineWidth = '20';
+			}
+			else {
+				context.lineWidth = '5';
+			}
 			context.moveTo(data.Points[0].x, data.Points[0].y);
 			for (i = 0; i < data.Points.length; i++) {
 				context.lineTo(data.Points[i].x, data.Points[i].y);
