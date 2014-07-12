@@ -7,7 +7,7 @@ function($scope, $window, StallsResource) {
   });
 
   $scope.goToStall = function(stall) {
-
+    $window.location.href = "#/stall/" + stall.id;
   }
 
 	
