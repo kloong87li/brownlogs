@@ -4,7 +4,7 @@ app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'partials/test.html',
+        templateUrl: 'partials/main.html',
         controller: 'MainController'
       });
   }]);
