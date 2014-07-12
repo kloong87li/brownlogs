@@ -1,5 +1,3 @@
-//var canvas = angular.module("canvas", []);
-
 app.controller('CanvasController', function($scope, canvasRenderer) {
 	'use strict';
 	var colors, 
