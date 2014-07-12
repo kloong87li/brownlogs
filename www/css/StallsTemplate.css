@@ -1,0 +1,11 @@
+#stallsContainer .stallName {
+    font-weight: bold;
+    font-size: 20px;
+    color: #AB5262;
+}
+
+#stallsContainer .stallPicture {
+   float: left; 
+   padding: 5px;
+}
+    

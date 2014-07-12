@@ -1,9 +1,12 @@
 <div id="stallsContainer">
 	<div class="stall" ng-repeat="stall in stalls" ng-click="goToStall(stall)">
-    <div class="stallName"> {{stall.name}} </div>
-    <div class="stallBuilding"> {{stall.building}} </div>
-    <div class="stallFloor"> {{stall.floor}} </div>
-    <div class="stallGender"> {{stall.gender}} </div>
-    <div class="stallRating"> {{stall.rating}} </div>
+    <div class="stallPicture"><img src="{{stall.pictureUrl}}" width="100px"></div>
+    <div class="rightStall">
+        <div class="stallName"> {{stall.name}} </div>
+        <div class="stallBuilding"><strong>Building:</strong> {{stall.building}} </div>
+        <div class="stallFloor"><strong>Floor:</strong> {{stall.floor}} </div>
+        <div class="stallGender"> Gender: {{stall.gender}} </div>
+        <div class="stallRating"> Rating: {{stall.rating}} </div>
+    </div>
 	</div>
 </div>
