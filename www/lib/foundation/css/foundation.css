@@ -1216,7 +1216,7 @@ select {
     float: left;
     font-size: 0.6875rem;
     line-height: 0.6875rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     color: #008CBA; }
     .breadcrumbs > *:hover a, .breadcrumbs > *:focus a {
       text-decoration: underline; }
@@ -3125,7 +3125,7 @@ dialog[open] {
       color: #008CBA;
       font-size: 0.875rem;
       font-weight: bold;
-      text-transform: uppercase; }
+      /*text-transform: uppercase;*/ }
 
 .split.button {
   position: relative;
@@ -3214,7 +3214,7 @@ dialog[open] {
   margin-right: 0;
   margin-left: -0.75rem; }
   .sub-nav dt {
-    text-transform: uppercase; }
+    /*text-transform: uppercase;*/ }
   .sub-nav dt, .sub-nav dd, .sub-nav li {
     float: left;
     display: inline;
@@ -3971,7 +3971,7 @@ meta.foundation-mq-topbar {
     top: 0; }
     .top-bar .toggle-topbar a {
       color: #fff;
-      text-transform: uppercase;
+      /*text-transform: uppercase;*/
       font-size: 0.8125rem;
       font-weight: bold;
       position: relative;
@@ -4183,7 +4183,7 @@ meta.foundation-mq-topbar {
     .top-bar-section .dropdown label {
       padding: 8px 15px 2px;
       margin-bottom: 0;
-      text-transform: uppercase;
+      /*text-transform: uppercase;*/
       color: #777;
       font-weight: bold;
       font-size: 0.625rem; }
@@ -4490,7 +4490,7 @@ ul.off-canvas-list {
     display: block;
     padding: 0.3rem 0.9375rem;
     color: #999;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: 0.75rem;
     font-weight: bold;
     background: #444;
