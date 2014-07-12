@@ -71,7 +71,11 @@ function($scope, $routeParams, $window, PostResource, $swipe) {
 	angular.element($window).bind('scroll', $scope.detectScrollDir);
 	
 	PostResource.fetchPosts({stallId: $scope.stallID}, function(response){
-		$scope.posts = response.msgs;
+		
+    for (var i = 0; i < response.msgs.length; ++i){
+      response.msgs[i].date = moment.utc(response.msgs[i].date).format("MMM DD");
+    }
+    $scope.posts = response.msgs;
 	});
 
 }]);
