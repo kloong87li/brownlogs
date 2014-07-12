@@ -30,6 +30,11 @@
 	background-color: #5e2e0d;
 }
 
+#eraser {
+	background: url(/img/icons/eraser.png) no-repeat;
+	background-size: 2rem;
+}
+
 canvas {
 	background-color: #fff;
 	margin-bottom: 20px;
