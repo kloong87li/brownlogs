@@ -1,20 +1,16 @@
 <div class="row">
-    <div id='stallsBar' class='icon-bar four-up'>
-        <a class='item' style='height: 113px;'>
-            <img class='browseIcon' src='img/icons/near.png'>
-            <label>Near</label>
+    <div id='stallsBar' class='icon-bar three-up' ng-class="filter">
+        <a class='item all-item' ng-click="setFilter('all')">
+            <img class='browseIcon' src='img/icons/all.png'>
+            <label>&nbsp&nbsp All &nbsp&nbsp Stalls</label>
         </a>
-        <a class='item'>
+        <a class='item men-item' ng-click="setFilter('male')">
             <img class='browseIcon' src='img/icons/male.png'>
             <label>Men's Stalls</label>
         </a>
-        <a class='item'>
+        <a class='item women-item' ng-click="setFilter('female')">
             <img class='browseIcon' src='img/icons/male.png'>
             <label>Women's Stalls</label>
-        </a>
-        <a class='item'>
-            <img class='browseIcon' src='img/icons/all.png'>
-            <label>All Stalls</label>
         </a>
     </div>
 </div>
